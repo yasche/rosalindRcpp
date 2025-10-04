@@ -4,12 +4,12 @@ using namespace Rcpp;
 // [[Rcpp::export]]
 IntegerVector dna(std::string s)
 {
-  int n_a = { 0 };
-  int n_c = { 0 };
-  int n_g = { 0 };
-  int n_t = { 0 };
+  int n_a { 0 };
+  int n_c { 0 };
+  int n_g { 0 };
+  int n_t { 0 };
 
-  std::string non_nucl = { "" };
+  std::string non_nucl { "" };
 
   for(std::string::size_type i = 0; i < s.size(); ++i)
   {

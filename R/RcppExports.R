@@ -18,6 +18,10 @@ hello_world <- function(your_name) {
     .Call(`_rosalindRcpp_hello_world`, your_name)
 }
 
+revc <- function(s) {
+    .Call(`_rosalindRcpp_revc`, s)
+}
+
 rna <- function(t) {
     .Call(`_rosalindRcpp_rna`, t)
 }

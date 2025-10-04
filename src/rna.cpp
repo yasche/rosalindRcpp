@@ -4,7 +4,7 @@ using namespace Rcpp;
 // [[Rcpp::export]]
 std::string rna(std::string t)
 {
-  std::string rna_str = { "" };
+  std::string rna_str { "" };
 
   for(std::string::size_type i = 0; i < t.size(); ++i)
     {
