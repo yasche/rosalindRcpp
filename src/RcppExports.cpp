@@ -10,6 +10,17 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// dna
+IntegerVector dna(std::string s);
+RcppExport SEXP _rosalindRcpp_dna(SEXP sSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::string >::type s(sSEXP);
+    rcpp_result_gen = Rcpp::wrap(dna(s));
+    return rcpp_result_gen;
+END_RCPP
+}
 // hello_world
 String hello_world(String your_name);
 RcppExport SEXP _rosalindRcpp_hello_world(SEXP your_nameSEXP) {
@@ -23,6 +34,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_rosalindRcpp_dna", (DL_FUNC) &_rosalindRcpp_dna, 1},
     {"_rosalindRcpp_hello_world", (DL_FUNC) &_rosalindRcpp_hello_world, 1},
     {NULL, NULL, 0}
 };
