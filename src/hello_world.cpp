@@ -1,9 +1,15 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
-
+//' Return "Hello world" as a string
+//'
+//' @description
+//' This is only a test.
+//'
+//' @return A string containing "Hello world"
+//' @export
 // [[Rcpp::export]]
-void hello_world()
+String hello_world()
 {
-  std::cout << "hello world";
+  return String("Hello world");
 }

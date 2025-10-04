@@ -11,12 +11,13 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // hello_world
-void hello_world();
+String hello_world();
 RcppExport SEXP _rosalindRcpp_hello_world() {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    hello_world();
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(hello_world());
+    return rcpp_result_gen;
 END_RCPP
 }
 
