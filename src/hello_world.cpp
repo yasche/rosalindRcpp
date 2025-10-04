@@ -11,5 +11,6 @@ using namespace Rcpp;
 // [[Rcpp::export]]
 String hello_world()
 {
-  return String("Hello world");
+  String s("Hello world");
+  return s;
 }
