@@ -11,18 +11,19 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // hello_world
-String hello_world();
-RcppExport SEXP _rosalindRcpp_hello_world() {
+String hello_world(String your_name);
+RcppExport SEXP _rosalindRcpp_hello_world(SEXP your_nameSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(hello_world());
+    Rcpp::traits::input_parameter< String >::type your_name(your_nameSEXP);
+    rcpp_result_gen = Rcpp::wrap(hello_world(your_name));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_rosalindRcpp_hello_world", (DL_FUNC) &_rosalindRcpp_hello_world, 0},
+    {"_rosalindRcpp_hello_world", (DL_FUNC) &_rosalindRcpp_hello_world, 1},
     {NULL, NULL, 0}
 };
 

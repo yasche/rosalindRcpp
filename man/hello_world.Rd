@@ -2,12 +2,15 @@
 % Please edit documentation in R/RcppExports.R
 \name{hello_world}
 \alias{hello_world}
-\title{Return "Hello world" as a string}
+\title{Combine "Hello world" and \code{your_name} and return it as a string}
 \usage{
-hello_world()
+hello_world(your_name)
+}
+\arguments{
+\item{your_name}{Your name}
 }
 \value{
-A string containing "Hello world"
+A string containing "Hello world", combined with your name
 }
 \description{
 This is only a test.
