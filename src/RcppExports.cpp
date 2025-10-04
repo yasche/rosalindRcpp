@@ -32,10 +32,22 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// rna
+std::string rna(std::string t);
+RcppExport SEXP _rosalindRcpp_rna(SEXP tSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::string >::type t(tSEXP);
+    rcpp_result_gen = Rcpp::wrap(rna(t));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_rosalindRcpp_dna", (DL_FUNC) &_rosalindRcpp_dna, 1},
     {"_rosalindRcpp_hello_world", (DL_FUNC) &_rosalindRcpp_hello_world, 1},
+    {"_rosalindRcpp_rna", (DL_FUNC) &_rosalindRcpp_rna, 1},
     {NULL, NULL, 0}
 };
 
