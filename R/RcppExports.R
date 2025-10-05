@@ -49,6 +49,10 @@ hello_world <- function(your_name) {
     .Call(`_rosalindRcpp_hello_world`, your_name)
 }
 
+iprb <- function(k, m, n) {
+    .Call(`_rosalindRcpp_iprb`, k, m, n)
+}
+
 #' A simple FASTA-parser, implemented in C++
 #'
 #' @description

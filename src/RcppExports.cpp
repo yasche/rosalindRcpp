@@ -67,6 +67,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// iprb
+double iprb(double k, double m, double n);
+RcppExport SEXP _rosalindRcpp_iprb(SEXP kSEXP, SEXP mSEXP, SEXP nSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type k(kSEXP);
+    Rcpp::traits::input_parameter< double >::type m(mSEXP);
+    Rcpp::traits::input_parameter< double >::type n(nSEXP);
+    rcpp_result_gen = Rcpp::wrap(iprb(k, m, n));
+    return rcpp_result_gen;
+END_RCPP
+}
 // parse_fasta
 List parse_fasta(std::string file_path);
 RcppExport SEXP _rosalindRcpp_parse_fasta(SEXP file_pathSEXP) {
@@ -107,6 +120,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_rosalindRcpp_gc", (DL_FUNC) &_rosalindRcpp_gc, 1},
     {"_rosalindRcpp_hamm", (DL_FUNC) &_rosalindRcpp_hamm, 2},
     {"_rosalindRcpp_hello_world", (DL_FUNC) &_rosalindRcpp_hello_world, 1},
+    {"_rosalindRcpp_iprb", (DL_FUNC) &_rosalindRcpp_iprb, 3},
     {"_rosalindRcpp_parse_fasta", (DL_FUNC) &_rosalindRcpp_parse_fasta, 1},
     {"_rosalindRcpp_revc", (DL_FUNC) &_rosalindRcpp_revc, 1},
     {"_rosalindRcpp_rna", (DL_FUNC) &_rosalindRcpp_rna, 1},
