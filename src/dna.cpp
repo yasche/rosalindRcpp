@@ -1,6 +1,15 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+//' Solution for Problem "Counting DNA Nucleotides"
+//'
+//' @description
+//' Counts DNA nucleotides in sequence `s` and returns the number of A, C, G and T in that order. Letters other than A, C, G and T will be ignored.
+//'
+//' @param s A string holding the sequence.
+//'
+//' @return A vector with the number of A, C, G and T in that order.
+//' @export
 // [[Rcpp::export]]
 IntegerVector dna(std::string s)
 {
