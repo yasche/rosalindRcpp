@@ -3,6 +3,7 @@
 export(dna)
 export(fib)
 export(hello_world)
+export(parse_fasta)
 export(revc)
 export(rna)
 importFrom(Rcpp,sourceCpp)

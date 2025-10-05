@@ -2,6 +2,15 @@
 #include <fstream>
 using namespace Rcpp;
 
+//' A simple FASTA-parser, implemented in C++
+//'
+//' @description
+//' Parses a FASTA file and returns the content as a named list.
+//'
+//' @param file_path The path of a FASTA file.
+//'
+//' @return A named list with the contents of the FASTA file.
+//' @export
 // [[Rcpp::export]]
 List parse_fasta(std::string file_path)
 {
