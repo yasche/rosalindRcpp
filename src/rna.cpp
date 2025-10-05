@@ -1,6 +1,15 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+//' Solution for Problem "Transcribing DNA into RNA"
+//'
+//' @description
+//' Replaces each T with an U.
+//'
+//' @param t A string holding the sequence.
+//'
+//' @return A string where each T has been replaced with an U.
+//' @export
 // [[Rcpp::export]]
 std::string rna(std::string t)
 {

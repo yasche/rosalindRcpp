@@ -39,6 +39,15 @@ revc <- function(s) {
     .Call(`_rosalindRcpp_revc`, s)
 }
 
+#' Solution for Problem "Transcribing DNA into RNA"
+#'
+#' @description
+#' Replaces each T with an U.
+#'
+#' @param t A string holding the sequence.
+#'
+#' @return A string where each T has been replaced with an U.
+#' @export
 rna <- function(t) {
     .Call(`_rosalindRcpp_rna`, t)
 }
