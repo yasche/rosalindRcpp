@@ -28,6 +28,10 @@ fib <- function(n, k) {
     .Call(`_rosalindRcpp_fib`, n, k)
 }
 
+gc <- function(file_path) {
+    .Call(`_rosalindRcpp_gc`, file_path)
+}
+
 #' Combine "Hello world" and `your_name` and return it as a string
 #'
 #' @description
@@ -41,6 +45,15 @@ hello_world <- function(your_name) {
     .Call(`_rosalindRcpp_hello_world`, your_name)
 }
 
+#' A simple FASTA-parser, implemented in C++
+#'
+#' @description
+#' Parses a FASTA file and returns the content as a named list.
+#'
+#' @param file_path The path of a FASTA file.
+#'
+#' @return A named list with the contents of the FASTA file.
+#' @export
 parse_fasta <- function(file_path) {
     .Call(`_rosalindRcpp_parse_fasta`, file_path)
 }

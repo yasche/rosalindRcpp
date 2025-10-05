@@ -33,6 +33,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// gc
+NumericVector gc(std::string file_path);
+RcppExport SEXP _rosalindRcpp_gc(SEXP file_pathSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::string >::type file_path(file_pathSEXP);
+    rcpp_result_gen = Rcpp::wrap(gc(file_path));
+    return rcpp_result_gen;
+END_RCPP
+}
 // hello_world
 String hello_world(String your_name);
 RcppExport SEXP _rosalindRcpp_hello_world(SEXP your_nameSEXP) {
@@ -81,6 +92,7 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_rosalindRcpp_dna", (DL_FUNC) &_rosalindRcpp_dna, 1},
     {"_rosalindRcpp_fib", (DL_FUNC) &_rosalindRcpp_fib, 2},
+    {"_rosalindRcpp_gc", (DL_FUNC) &_rosalindRcpp_gc, 1},
     {"_rosalindRcpp_hello_world", (DL_FUNC) &_rosalindRcpp_hello_world, 1},
     {"_rosalindRcpp_parse_fasta", (DL_FUNC) &_rosalindRcpp_parse_fasta, 1},
     {"_rosalindRcpp_revc", (DL_FUNC) &_rosalindRcpp_revc, 1},
