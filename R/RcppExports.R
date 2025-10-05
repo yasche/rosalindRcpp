@@ -32,6 +32,10 @@ gc <- function(file_path) {
     .Call(`_rosalindRcpp_gc`, file_path)
 }
 
+hamm <- function(s, t) {
+    .Call(`_rosalindRcpp_hamm`, s, t)
+}
+
 #' Combine "Hello world" and `your_name` and return it as a string
 #'
 #' @description
