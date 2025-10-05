@@ -2,6 +2,7 @@
 
 export(dna)
 export(hello_world)
+export(revc)
 export(rna)
 importFrom(Rcpp,sourceCpp)
 useDynLib(rosalindRcpp, .registration = TRUE)

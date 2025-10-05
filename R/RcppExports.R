@@ -35,6 +35,15 @@ parse_fasta <- function(file_path) {
     .Call(`_rosalindRcpp_parse_fasta`, file_path)
 }
 
+#' Solution for Problem "Complementing a Strand of DNA"
+#'
+#' @description
+#' Reverses the sequence `s` and replaces each nucleotide with the complement (i.e., A<->T and G<->C). Non-nucleotide letters will be ignored.
+#'
+#' @param s A string holding the sequence.
+#'
+#' @return The complement, sc, of string s.
+#' @export
 revc <- function(s) {
     .Call(`_rosalindRcpp_revc`, s)
 }

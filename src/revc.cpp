@@ -1,6 +1,15 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+//' Solution for Problem "Complementing a Strand of DNA"
+//'
+//' @description
+//' Reverses the sequence `s` and replaces each nucleotide with the complement (i.e., A<->T and G<->C). Non-nucleotide letters will be ignored.
+//'
+//' @param s A string holding the sequence.
+//'
+//' @return The complement, sc, of string s.
+//' @export
 // [[Rcpp::export]]
 std::string revc(std::string s)
 {
