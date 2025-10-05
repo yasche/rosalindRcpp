@@ -22,6 +22,10 @@ hello_world <- function(your_name) {
     .Call(`_rosalindRcpp_hello_world`, your_name)
 }
 
+parse_fasta <- function(file_path) {
+    .Call(`_rosalindRcpp_parse_fasta`, file_path)
+}
+
 revc <- function(s) {
     .Call(`_rosalindRcpp_revc`, s)
 }

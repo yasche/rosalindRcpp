@@ -44,6 +44,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// parse_fasta
+List parse_fasta(std::string file_path);
+RcppExport SEXP _rosalindRcpp_parse_fasta(SEXP file_pathSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::string >::type file_path(file_pathSEXP);
+    rcpp_result_gen = Rcpp::wrap(parse_fasta(file_path));
+    return rcpp_result_gen;
+END_RCPP
+}
 // revc
 std::string revc(std::string s);
 RcppExport SEXP _rosalindRcpp_revc(SEXP sSEXP) {
@@ -71,6 +82,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_rosalindRcpp_dna", (DL_FUNC) &_rosalindRcpp_dna, 1},
     {"_rosalindRcpp_fib", (DL_FUNC) &_rosalindRcpp_fib, 2},
     {"_rosalindRcpp_hello_world", (DL_FUNC) &_rosalindRcpp_hello_world, 1},
+    {"_rosalindRcpp_parse_fasta", (DL_FUNC) &_rosalindRcpp_parse_fasta, 1},
     {"_rosalindRcpp_revc", (DL_FUNC) &_rosalindRcpp_revc, 1},
     {"_rosalindRcpp_rna", (DL_FUNC) &_rosalindRcpp_rna, 1},
     {NULL, NULL, 0}
