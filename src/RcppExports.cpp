@@ -21,6 +21,18 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// fib
+long long int fib(int n, int k);
+RcppExport SEXP _rosalindRcpp_fib(SEXP nSEXP, SEXP kSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    Rcpp::traits::input_parameter< int >::type k(kSEXP);
+    rcpp_result_gen = Rcpp::wrap(fib(n, k));
+    return rcpp_result_gen;
+END_RCPP
+}
 // hello_world
 String hello_world(String your_name);
 RcppExport SEXP _rosalindRcpp_hello_world(SEXP your_nameSEXP) {
@@ -57,6 +69,7 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_rosalindRcpp_dna", (DL_FUNC) &_rosalindRcpp_dna, 1},
+    {"_rosalindRcpp_fib", (DL_FUNC) &_rosalindRcpp_fib, 2},
     {"_rosalindRcpp_hello_world", (DL_FUNC) &_rosalindRcpp_hello_world, 1},
     {"_rosalindRcpp_revc", (DL_FUNC) &_rosalindRcpp_revc, 1},
     {"_rosalindRcpp_rna", (DL_FUNC) &_rosalindRcpp_rna, 1},

@@ -5,6 +5,10 @@ dna <- function(s) {
     .Call(`_rosalindRcpp_dna`, s)
 }
 
+fib <- function(n, k) {
+    .Call(`_rosalindRcpp_fib`, n, k)
+}
+
 #' Combine "Hello world" and `your_name` and return it as a string
 #'
 #' @description
