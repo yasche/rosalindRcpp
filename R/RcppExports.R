@@ -14,6 +14,16 @@ dna <- function(s) {
     .Call(`_rosalindRcpp_dna`, s)
 }
 
+#' Solution for Problem "Rabbits and Recurrence Relations"
+#'
+#' @description
+#' Calculates the number of rabbit pairs after n months.
+#'
+#' @param n The number of months as an integer.
+#' @param k The number of rabbit pairs as an integer.
+#'
+#' @return The number of rabbit pairs after n months.
+#' @export
 fib <- function(n, k) {
     .Call(`_rosalindRcpp_fib`, n, k)
 }
