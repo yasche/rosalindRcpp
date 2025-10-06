@@ -3,7 +3,7 @@ Title: Some Simple Bioinformatics Algorithms
 Version: 0.0.0.9000
 Authors@R: 
     person("Yannik", "Schermer", , "first.last@example.com", role = c("aut", "cre"))
-Description: My solutions for problems from the bioinformatics learning website <https://rosalind.info/>. All algorithms are implemented using pure 'Rcpp'. This is mainly an exercise for getting to know the 'Rcpp' package.
+Description: My solutions for problems from the bioinformatics learning website <https://rosalind.info/>. All algorithms are implemented using pure 'Rcpp'. This is mainly an exercise for getting to know the 'Rcpp' package and 'C++' in general.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
