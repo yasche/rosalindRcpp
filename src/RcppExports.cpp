@@ -113,6 +113,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// triplet_to_aa
+String triplet_to_aa(std::string triplet);
+RcppExport SEXP _rosalindRcpp_triplet_to_aa(SEXP tripletSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::string >::type triplet(tripletSEXP);
+    rcpp_result_gen = Rcpp::wrap(triplet_to_aa(triplet));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_rosalindRcpp_dna", (DL_FUNC) &_rosalindRcpp_dna, 1},
@@ -124,6 +135,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_rosalindRcpp_parse_fasta", (DL_FUNC) &_rosalindRcpp_parse_fasta, 1},
     {"_rosalindRcpp_revc", (DL_FUNC) &_rosalindRcpp_revc, 1},
     {"_rosalindRcpp_rna", (DL_FUNC) &_rosalindRcpp_rna, 1},
+    {"_rosalindRcpp_triplet_to_aa", (DL_FUNC) &_rosalindRcpp_triplet_to_aa, 1},
     {NULL, NULL, 0}
 };
 

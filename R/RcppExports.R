@@ -92,3 +92,7 @@ rna <- function(t) {
     .Call(`_rosalindRcpp_rna`, t)
 }
 
+triplet_to_aa <- function(triplet) {
+    .Call(`_rosalindRcpp_triplet_to_aa`, triplet)
+}
+
