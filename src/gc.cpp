@@ -3,6 +3,15 @@
 #include "dna.h"
 using namespace Rcpp;
 
+//' Solution for Problem "Computing GC Content"
+//'
+//' @description
+//' Calculates the percentage of G and C nucleotides in the sequences of the given FASTA file and returns the highest GC percentage along with the name of the sequence as a named vector.
+//'
+//' @param file_path The path of the FASTA file as a string.
+//'
+//' @return The highest GC percentage along with the name in the form of a named vector with one element.
+//' @export
 // [[Rcpp::export]]
 NumericVector gc(std::string file_path)
 {
