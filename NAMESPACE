@@ -3,6 +3,7 @@
 export(dna)
 export(fib)
 export(gc)
+export(hamm)
 export(hello_world)
 export(parse_fasta)
 export(revc)

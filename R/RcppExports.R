@@ -41,6 +41,16 @@ gc <- function(file_path) {
     .Call(`_rosalindRcpp_gc`, file_path)
 }
 
+#' Solution for Problem "Counting Point Mutations"
+#'
+#' @description
+#' Calculates the Hamming distance dH(s,t) of DNA strings s and t (i.e., the number of point mutations).
+#'
+#' @param s A DNA sequence as a string.
+#' @param t A DNA sequence as a string.
+#'
+#' @return The number of point mutations.
+#' @export
 hamm <- function(s, t) {
     .Call(`_rosalindRcpp_hamm`, s, t)
 }

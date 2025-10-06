@@ -1,6 +1,16 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+//' Solution for Problem "Counting Point Mutations"
+//'
+//' @description
+//' Calculates the Hamming distance dH(s,t) of DNA strings s and t (i.e., the number of point mutations).
+//'
+//' @param s A DNA sequence as a string.
+//' @param t A DNA sequence as a string.
+//'
+//' @return The number of point mutations.
+//' @export
 // [[Rcpp::export]]
 int hamm(std::string s, std::string t)
 {
