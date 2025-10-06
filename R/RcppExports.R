@@ -66,6 +66,10 @@ parse_fasta <- function(file_path) {
     .Call(`_rosalindRcpp_parse_fasta`, file_path)
 }
 
+prot <- function(s) {
+    .Call(`_rosalindRcpp_prot`, s)
+}
+
 #' Solution for Problem "Complementing a Strand of DNA"
 #'
 #' @description
